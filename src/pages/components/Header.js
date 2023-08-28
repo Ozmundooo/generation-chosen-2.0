@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../assets/Logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
 
 export default function Header(props) {
+  const [homeStart, setHomeStart] = useState(props.home ? 0 : 1);
+  useEffect(() => {
+    if (props.home) {
+      setTimeout(() => {
+        setHomeStart(1);
+      }, 1000);
+    }
+  });
   return (
     <>
       <header
         className={
           props.home
-            ? "flex lg:justify-between px-2 lg:p-10 lg:py-6 p-4 align-middle  lg:place-items-center bg-white rounded-full"
+            ? homeStart === 1
+              ? "flex lg:justify-between px-2 lg:p-10 lg:py-6 p-4 align-middle  lg:place-items-center bg-white rounded-full opacity-100 duration-1000"
+              : "flex lg:justify-between px-2 lg:p-10 lg:py-6 p-4 align-middle  lg:place-items-center bg-white rounded-full opacity-0 duration-1000"
             : "flex lg:justify-between px-2 lg:p-10 lg:py-6 p-4 align-middle  lg:place-items-center bg-white "
         }
       >

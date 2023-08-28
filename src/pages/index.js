@@ -30,14 +30,11 @@ export default function Home() {
             autoPlay
             loop
             muted
-            className="w-full h-[60vh] lg:h-screen opacity-60 object-cover"
+            className="w-full h-[60vh] relative lg:h-screen opacity-60 object-cover"
           >
             <source src="/HomeHero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 top-0  items-center justify-center rounded-3xl mx-3  lg:mx-10 mt-5 lg:mt-10">
-            <Header home={true} />
-          </div>
           <div className="absolute inset-0 md:right-1/4 flex items-center justify-center mx-6 lg:mx-12">
             <div className=" my-5  lg:my-auto text-white">
               <Image
@@ -53,21 +50,10 @@ export default function Home() {
                 intergenerational cycles of trauma and poverty in lower-income
                 communities.
               </h4>
-              <div className="flex flex-row gap-4 font-title font-semibold md:text-xl">
-                <Link
-                  className="bg-[#CB2607] text-white py-2 px-4 rounded-lg w-1/2 lg:w-1/4 text-center"
-                  href={"/"}
-                >
-                  Programs
-                </Link>
-                <Link
-                  className="border-[#CB2607] border-2 py-2 px-4 rounded-lg w-1/2 lg:w-1/4 text-center"
-                  href={"/"}
-                >
-                  Our Team
-                </Link>
-              </div>
             </div>
+          </div>
+          <div className="absolute inset-0 items-center justify-center rounded-3xl mx-3 z-100 lg:mx-10 mt-5 lg:mt-10">
+            <Header home={true} />
           </div>
         </div>
 
