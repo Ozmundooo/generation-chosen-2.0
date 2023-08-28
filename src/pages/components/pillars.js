@@ -14,10 +14,10 @@ export default function pillars() {
   return (
     <section className="lg:flex lg:gap-5 lg:my-16 mx-6 lg:mx-12">
       <div className="my-10 lg:w-1/2 lg:my-auto">
-        <h1 className="mb-2 text-3xl font-title font-medium text-[#CB2607]">
+        <h1 className="mb-2 text-3xl lg:text-4xl font-title font-medium text-[#CB2607]">
           <span className="text-black">Our</span> Pillars
         </h1>
-        <h4 className="text-md font-light font-subtitle mb-4">
+        <h4 className="text-md lg:text-lg font-light font-subtitle mb-4 lg:w-2/3">
           Our program caters to the needs of racialized, marginalized and
           disenfranchised inner-city youth by focussing on 4 key areas, which we
           believe, fundamentally catalyze holistic human development.
