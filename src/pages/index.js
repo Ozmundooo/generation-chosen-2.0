@@ -48,7 +48,7 @@ export default function Home() {
               <h1 className="mb-2 text-lg md:text-3xl lg:text-4xl xl:text-6xl font-title font-medium ">
                 Generation Chosen
               </h1>
-              <h4 className="text-sm md:text-lg lg:text-xl xl:text-2xl font-normal font-title mb-4 lg:w-3/4">
+              <h4 className="text-sm md:text-lg lg:text-xl xl:text-2xl font-normal font-title mb-4 lg:w-3/4 xl:w-1/2">
                 Devoted to <span className="text-[#CB2607]">interrupting</span>{" "}
                 intergenerational cycles of trauma and poverty in lower-income
                 communities.

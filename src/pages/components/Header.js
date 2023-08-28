@@ -4,14 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
 
-import "react-responsive-modal/styles.css";
-import { Modal } from "react-responsive-modal";
 export default function Header(props) {
-  const [open, setOpen] = useState(false);
-
-  const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen(false);
-
   return (
     <>
       <header
@@ -27,65 +20,56 @@ export default function Header(props) {
           </Link>
         </div>
         <div className="font-['Poppins'] font-normal text-black ">
-          <ul className="lg:flex hidden flex-row align-middle gap-8 text-lg">
+          <ul className="lg:flex hidden flex-row align-middle justify-center gap-8 text-lg ">
             <Link
-              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out"
+              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out my-auto"
               href="/executive-directors"
             >
               <li>Our Team</li>
             </Link>
             <Link
-              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out"
+              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out my-auto"
               href="/our-founders"
             >
               <li>Founders</li>
             </Link>
 
             <Link
-              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out"
+              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out my-auto"
               href="/programs"
             >
               <li>Programs</li>
             </Link>
             <Link
-              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out"
+              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out my-auto"
               href="/videos"
             >
               <li>Videos</li>
             </Link>
             <Link
-              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out"
+              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out my-auto"
               href="https://www.anchorshop.org"
             >
               <li>Shop</li>
             </Link>
             <Link
-              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out"
+              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out my-auto"
               href="/contact"
             >
               <li>Contact</li>
             </Link>
-            <div
-              className="hover:underline underline-offset-1 hover:underline-offset-4  ease-in-out cursor-pointer "
-              onClick={() => onOpenModal()}
+            <Link
+              className="bg-[#CB2607]  text-white font-medium rounded-full py-2 px-6  text-center"
+              href="/contact"
             >
               <li>Donate</li>
-            </div>
+            </Link>
           </ul>
         </div>
         <div className="lg:hidden">
           <Sidebar />
         </div>
       </header>
-      <Modal open={open} onClose={onCloseModal} center>
-        <div className="">
-          <h2 className="p- text-xl font-semibold ">Donate </h2>
-          <p>
-            If you would like to financially support our organization e-transfer
-            generationchosenone@gmail.com and use the password chosenone
-          </p>
-        </div>
-      </Modal>
     </>
   );
 }
